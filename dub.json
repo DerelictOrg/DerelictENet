@@ -1,0 +1,16 @@
+{
+    "name": "derelict-enet",
+    "description": "A dynamic binding to the ENet library.",
+    "homepage": "https://github.com/DerelictOrg/DerelictENet",
+    "license": "Boost",
+    "authors": [
+        "ponce"
+    ],
+
+    "targetName": "DerelictENet",
+    "targetPath": "lib",
+
+    "dependencies": {
+        "derelict-util": ">=1.0.0"
+    }
+}
