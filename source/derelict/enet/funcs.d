@@ -34,7 +34,7 @@ module derelict.enet.funcs;
 
 private
 {
-    import derelict.enet.types;
+    import derelict.util.system;
     import derelict.enet.types;
 }
 
