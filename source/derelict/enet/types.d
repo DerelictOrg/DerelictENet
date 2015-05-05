@@ -442,7 +442,7 @@ struct ENetCallbacks
 
 enum ENET_VERSION_MAJOR = 1;
 enum ENET_VERSION_MINOR = 3;
-enum ENET_VERSION_PATCH = 9;
+enum ENET_VERSION_PATCH = 13;
 
 int ENET_VERSION_CREATE(int major, int minor, int patch)
 {
@@ -739,6 +739,7 @@ struct ENetPeer
    enet_uint16   outgoingUnsequencedGroup;
    enet_uint32[ENET_PEER_UNSEQUENCED_WINDOW_SIZE / 32] unsequencedWindow; 
    enet_uint32   eventData;
+   size_t        totalWaitingData;
 }
 
 /** An ENet packet compressor for compressing UDP packets before socket sends or receives.
@@ -813,6 +814,8 @@ struct ENetHost
    size_t               connectedPeers;
    size_t               bandwidthLimitedPeers;
    size_t               duplicatePeers;              /**< optional number of allowed peers from duplicate IPs, defaults to ENET_PROTOCOL_MAXIMUM_PEER_ID */
+   size_t               maximumPacketSize;           /**< the maximum allowable packet size that may be sent or received on a peer */
+   size_t               maximumWaitingData;          /**< the maximum aggregate amount of buffer space a peer may use waiting for packets to be delivered */
 }
 
 /**
