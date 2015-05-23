@@ -59,7 +59,7 @@ private
     else static if (Derelict_OS_Linux)
         enum libNames = "libenet.so";
     else
-        static assert(0, "Need to implement BASS libNames for this operating system.");
+        static assert(0, "Need to implement ENet libNames for this operating system.");
 }
 
 class DerelictENetLoader : SharedLibLoader
