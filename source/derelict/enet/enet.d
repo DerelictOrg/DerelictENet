@@ -53,7 +53,7 @@ private
     import derelict.util.system;
 
     static if(Derelict_OS_Windows)
-        enum libNames = "libenet.dll";    
+        enum libNames = "libenet.dll, enet.dll";    
     else static if (Derelict_OS_Mac)
         enum libNames = "libenet.dylib";
     else static if (Derelict_OS_Linux)
