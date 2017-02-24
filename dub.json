@@ -4,13 +4,13 @@
     "homepage": "https://github.com/DerelictOrg/DerelictENet",
     "license": "Boost",
     "authors": [
-        "ponce"
+        "Guillaume Piolat (ponce)"
     ],
 
     "targetName": "DerelictENet",
     "targetPath": "lib",
 
     "dependencies": {
-        "derelict-util": "~>2.0"
+        "derelict-util": "~>3.0-alpha.1"
     }
 }
