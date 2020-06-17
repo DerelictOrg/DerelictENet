@@ -1,7 +1,7 @@
 DerelictENET
 ============
 
- _Based on enet version: `1.3.15`__
+ _Based on enet version: `1.3.15`_
 
 A dynamic binding to [ENet](http://enet.bespin.org/) for the D Programming Language.
 
