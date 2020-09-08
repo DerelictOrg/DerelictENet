@@ -673,6 +673,11 @@ struct ENetChannel
    ENetList     incomingUnreliableCommands;
 }
 
+enum ENetPeerFlag : int
+{
+   ENET_PEER_FLAG_NEEDS_DISPATCH = (1 << 0),
+}
+
 /**
  * An ENet peer which data packets may be sent or received from. 
  *
@@ -734,7 +739,9 @@ struct ENetPeer
    ENetList      outgoingReliableCommands;
    ENetList      outgoingUnreliableCommands;
    ENetList      dispatchedCommands;
-   int           needsDispatch;
+   enet_uint16   flags;
+   enet_uint8    roundTripTimeRemainder;
+   enet_uint8    roundTripTimeVarianceRemainder;
    enet_uint16   incomingUnsequencedGroup;
    enet_uint16   outgoingUnsequencedGroup;
    enet_uint32[ENET_PEER_UNSEQUENCED_WINDOW_SIZE / 32] unsequencedWindow; 

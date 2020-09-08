@@ -93,6 +93,7 @@ extern(C) @nogc nothrow
     alias void   function(void *) da_enet_range_coder_destroy;
     alias size_t function(void *, const ENetBuffer *, size_t, size_t, enet_uint8 *, size_t) da_enet_range_coder_compress;
     alias size_t function(void *, const enet_uint8 *, size_t, enet_uint8 *, size_t) da_enet_range_coder_decompress;
+    alias int       function(ENetAddress * address, const char * hostName) da_enet_address_set_host_ip;
 }
 
 __gshared
@@ -148,6 +149,7 @@ __gshared
     da_enet_range_coder_destroy enet_range_coder_destroy;
     da_enet_range_coder_compress enet_range_coder_compress;
     da_enet_range_coder_decompress enet_range_coder_decompress;
+    da_enet_address_set_host_ip enet_address_set_host_ip;
 }
 
 
